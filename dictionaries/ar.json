@@ -1,0 +1,74 @@
+
+{
+    "header": {
+        "stamps": "أختامي",
+        "scan": "امسح الرمز",
+        "dashboard": "لوحة التحكم",
+        "login": "تسجيل الدخول"
+    },
+    "login": {
+        "title": "أهلاً بك في كوفي كوين",
+        "subtitle": "بطاقة ولائك الرقمية لأفضل المقاهي.",
+        "phoneLabel": "رقم الهاتف",
+        "phonePlaceholder": "مثال: +966 50 123 4567",
+        "otpLabel": "رمز التحقق",
+        "otpPlaceholder": "أدخل الرمز المكون من 6 أرقام",
+        "sendCode": "أرسل الرمز",
+        "verify": "تحقق وسجل الدخول",
+        "sending": "جار الإرسال...",
+        "verifying": "جار التحقق..."
+    },
+    "stamps": {
+        "title": "بطاقات أختامي",
+        "subtitle": "اجمع الأختام واحصل على قهوة مجانية!",
+        "shopTitle": "مقهى البيت",
+        "rewardThreshold": "10 أختام مقابل قهوة مجانية",
+        "stampsCollected": "{count} من {total} أختام",
+        "rewardReady": "المكافأة جاهزة!",
+        "redeem": "استرد الآن"
+    },
+    "scan": {
+        "title": "امسح رمز الاستجابة السريعة",
+        "shopName": "جار المسح لـ {shopName}",
+        "status": {
+            "initial": "وجه كاميرتك نحو رمز الاستجابة السريعة.",
+            "requesting_location": "جار طلب إذن الموقع...",
+            "checking_fraud": "جار التحقق من ختمك...",
+            "success": "تمت إضافة الختم بنجاح! استمتع بقهوتك.",
+            "error_location": "تم رفض الوصول إلى الموقع. يرجى تمكين خدمات الموقع في متصفحك لجمع الأختام.",
+            "error_fraud": "فشل جمع الختم. يرجى المحاولة مرة أخرى في وقت لاحق.",
+            "error_generic": "حدث خطأ غير معروف."
+        },
+        "fraudReason": "سبب فحص الاحتيال: {reason}",
+        "fraudScore": "درجة المخاطرة: {score}",
+        "retry": "حاول مرة أخرى"
+    },
+    "dashboard": {
+        "nav": {
+            "overview": "نظرة عامة",
+            "settings": "الإعدادات",
+            "analytics": "التحليلات"
+        },
+        "overview": {
+            "title": "لوحة التحكم",
+            "totalStamps": "مجموع الأختام الممنوحة",
+            "totalRewards": "مجموع المكافآت المستردة",
+            "activeCustomers": "العملاء النشطون",
+            "fraudAlerts": "تنبيهات الاحتيال",
+            "recentActivity": "نشاط الأختام الأخير",
+            "user": "المستخدم",
+            "timestamp": "الوقت",
+            "status": "الحالة"
+        },
+        "settings": {
+            "title": "إعدادات المقهى",
+            "stampsForReward": "عدد الأختام للمكافأة",
+            "rateLimit": "الحد الزمني (ساعات)",
+            "geofence": "نطاق السياج الجغرافي (متر)",
+            "save": "حفظ الإعدادات",
+            "qrCodeTitle": "رمز الاستجابة السريعة لمتجرك",
+            "qrCodeDescription": "اطبع هذا الرمز واعرضه عند طاولة الدفع.",
+            "download": "تنزيل"
+        }
+    }
+}

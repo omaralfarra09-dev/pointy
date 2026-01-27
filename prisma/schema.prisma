@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/lib/server/db/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+
+model User {
+  id          String   @id @default(cuid())
+  phoneNumber String   @unique
+  name        String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  stamps      Stamp[]
+}
+
+model Otp {
+  id          String   @id @default(cuid())
+  phoneNumber String   @unique
+  code        String
+  expiresAt   DateTime
+  createdAt   DateTime @default(now())
+}
+
+model Shop {
+  id        String   @id @default(cuid())
+  name      String
+  location  String?
+  stamps    Stamp[]
+}
+
+model Stamp {
+  id        String   @id @default(cuid())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  shop      Shop     @relation(fields: [shopId], references: [id])
+  shopId    String
+  createdAt DateTime @default(now())
+}

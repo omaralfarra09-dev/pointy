@@ -1,0 +1,74 @@
+
+{
+    "header": {
+        "stamps": "My Stamps",
+        "scan": "Scan QR",
+        "dashboard": "Dashboard",
+        "login": "Log In"
+    },
+    "login": {
+        "title": "Welcome to CoffeeCoin",
+        "subtitle": "Your digital loyalty card for the best coffee shops.",
+        "phoneLabel": "Phone Number",
+        "phonePlaceholder": "e.g., +1 555 123 4567",
+        "otpLabel": "Verification Code",
+        "otpPlaceholder": "Enter the 6-digit code",
+        "sendCode": "Send Code",
+        "verify": "Verify & Log In",
+        "sending": "Sending...",
+        "verifying": "Verifying..."
+    },
+    "stamps": {
+        "title": "My Stamp Cards",
+        "subtitle": "Collect stamps and earn free coffee!",
+        "shopTitle": "The Coffee House",
+        "rewardThreshold": "10 stamps for a free coffee",
+        "stampsCollected": "{count} of {total} stamps",
+        "rewardReady": "Reward Ready!",
+        "redeem": "Redeem Now"
+    },
+    "scan": {
+        "title": "Scan QR Code",
+        "shopName": "Scanning for {shopName}",
+        "status": {
+            "initial": "Point your camera at the QR code.",
+            "requesting_location": "Requesting location permission...",
+            "checking_fraud": "Verifying your stamp...",
+            "success": "Stamp added successfully! Enjoy your coffee.",
+            "error_location": "Location access denied. Please enable location services in your browser to collect stamps.",
+            "error_fraud": "Stamp collection failed. Please try again later.",
+            "error_generic": "An unknown error occurred."
+        },
+        "fraudReason": "Fraud check reason: {reason}",
+        "fraudScore": "Risk Score: {score}",
+        "retry": "Try Again"
+    },
+    "dashboard": {
+        "nav": {
+            "overview": "Overview",
+            "settings": "Settings",
+            "analytics": "Analytics"
+        },
+        "overview": {
+            "title": "Dashboard",
+            "totalStamps": "Total Stamps Awarded",
+            "totalRewards": "Total Rewards Redeemed",
+            "activeCustomers": "Active Customers",
+            "fraudAlerts": "Fraud Alerts",
+            "recentActivity": "Recent Stamp Activity",
+            "user": "User",
+            "timestamp": "Timestamp",
+            "status": "Status"
+        },
+        "settings": {
+            "title": "Shop Settings",
+            "stampsForReward": "Stamps for Reward",
+            "rateLimit": "Rate Limit (hours)",
+            "geofence": "Geofence Radius (meters)",
+            "save": "Save Settings",
+            "qrCodeTitle": "Your Shop's QR Code",
+            "qrCodeDescription": "Print this and display it at your counter.",
+            "download": "Download"
+        }
+    }
+}
