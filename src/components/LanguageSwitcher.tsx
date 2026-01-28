@@ -34,7 +34,7 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
       <button
         onClick={() => switchLanguage('ar-SY')}
         className={`px-4 py-2 rounded font-arabic ${
-          currentLang === 'ar-SY' ? 'bg-green-600 text-white' : 'bg-gray-200'
+          currentLang === 'ar-SY' ? 'bg-amber-900 text-white' : 'bg-gray-200'
         }`}
       >
         العربية (سوريا)
