@@ -1,8 +1,7 @@
-import { Noto_Naskh_Arabic, Architects_Daughter } from "next/font/google";
+import { Architects_Daughter } from "next/font/google";
 import type { Metadata } from "next";
 //@ts-ignore
 import "../globals.css";
-import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Toaster } from "@/components/ui/sonner";
 const sansFont = Architects_Daughter({
   subsets: ["latin"],
@@ -27,7 +26,6 @@ export default async function RootLayout({
   return (
     <html lang={lang} dir={isRtl ? "rtl" : "ltr"}>
       <body className={`${sansFont.className} antialiased`}>
-        <LanguageSwitcher locale={lang} />
         {children}
         <Toaster />
       </body>

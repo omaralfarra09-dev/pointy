@@ -1,38 +1,35 @@
 "use client";
 
 import { useLanguageSwitcher } from "@/hooks/use-language-switcher";
-
-import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export function LanguageSwitcher({ locale }: { locale: string }) {
-  const { switchLanguage, isCurrentLanguage } = useLanguageSwitcher(locale);
+  const { switchLanguage } = useLanguageSwitcher(locale);
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild className="relative top-0 left-0">
-        <Button variant="ghost" size="icon" className="relative top-0 left-0">
-          <Globe className="h-[1.2rem] w-[1.2rem]" />
-          <span className="sr-only">Change language</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {["en", "ar-SY"].map((newLocale) => (
-          <DropdownMenuItem
-            key={newLocale}
-            onClick={() => switchLanguage(newLocale)}
-            disabled={isCurrentLanguage(newLocale)}
-          >
-            {newLocale === "en" ? "English" : "العربية"}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="w-full px-2 group-data-[collapsible=icon]:px-0">
+      <Select value={locale} onValueChange={(val) => switchLanguage(val)}>
+        <SelectTrigger 
+          className="w-full gap-2 bg-background/50 backdrop-blur-sm border-muted-foreground/20 hover:bg-accent hover:text-accent-foreground transition-colors group-data-[collapsible=icon]:border-none group-data-[collapsible=icon]:justify-center"
+        >
+          <Globe className="h-4 w-4 shrink-0" />
+          <div className="flex-1 text-left group-data-[collapsible=icon]:hidden">
+            <SelectValue placeholder="Select Language" />
+          </div>
+        </SelectTrigger>
+        
+        <SelectContent>
+          <SelectItem value="en">English</SelectItem>
+          <SelectItem value="ar-SY">العربية</SelectItem>
+        </SelectContent>
+      </Select>
+    </div>
   );
 }
